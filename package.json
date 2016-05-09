@@ -1,0 +1,25 @@
+{
+  "name": "mongo-index-exporter",
+  "version": "0.1.0",
+  "description": "Utility to export indexes from your mongodb database.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "mongo-index-exporter": "./bin/index"
+  },
+  "keywords": [
+    "mongo",
+    "index",
+    "export"
+  ],
+  "author": "martinerko",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.3.5",
+    "debug": "^2.2.0",
+    "minimist": "^1.2.0",
+    "mongodb": "^2.1.18"
+  }
+}

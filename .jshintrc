@@ -1,0 +1,11 @@
+{
+    "sub": true,
+    "undef": true,
+    "node": true,
+    "unused": true,
+    "laxbreak": true,
+    "expr": true,
+    "curly": true,
+    "sub": true,
+    "mocha": true
+}
