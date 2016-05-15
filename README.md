@@ -1,32 +1,40 @@
 # Mongo index exporter
-Having correct and effective indexes is very important. As your system grows you might want to update indexes to increase your db performance.
+Having correct and effective indexes is very important. As your system grows you might want to update indexes to increase the performance of your db.
 You would probably need to start with exporting current indexes.
 
 I have created this utility to simplify this process.
 
 ## Usage
-This utility can be used as a node module (see [sample](https://github.com/martinerko/mongo-index-exporter/tree/master/samples) folder) and also as a command-line tool.
+This utility can be used command-line tool and also as a node module (see [sample](https://github.com/martinerko/mongo-index-exporter/tree/master/samples) folder).
 
-This utility is provided with help that will tell you everything you might need:
+## Installation
 
 ```sh
-node bin/  --help
+npm install -g mongo-index-exporter
+```
+
+## CLI
+
+Command-line version is provided with help that will tell you everything you might need:
+
+```sh
+mongo-index-exporter  --help
 ```
 
 Basic usage:
 
 ```sh
-node bin/ localhost:27017/test
+mongo-index-exporter localhost:27017/test
 ```
 
 Usage with authentication:
 
 ```sh
-node bin/ localhost:27017/test --username john --password T0pS3ecr3tP@ssw0rd
+mongo-index-exporter localhost:27017/test --username john --password T0pS3ecr3tP@ssw0rd
 ```
 
 ### Output
-Bin version outputs index definitions in a format that you can immediately use to instantiate your database indexes:
+CLI version outputs index definitions in a format that you can immediately use to instantiate your database indexes:
 
 ```sh
 // library.books
