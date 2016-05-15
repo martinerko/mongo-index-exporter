@@ -1,7 +1,7 @@
 {
   "name": "mongo-index-exporter",
-  "version": "1.0.0",
-  "description": "Utility to export indexes from your mongodb database.",
+  "version": "1.0.1",
+  "description": "Utility to export indexes from your MongoDB database.",
   "repository": "git@github.com:martinerko/mongo-index-exporter.git",
   "main": "index.js",
   "scripts": {
