@@ -22,7 +22,8 @@ if (argv.h || argv.help) {
 var connArgs = {
   connectionString: process.argv[2],
   username: argv.username,
-  password: argv.password
+  password: argv.password,
+  authenticationDatabase: argv.authenticationDatabase
 };
 
 function processOutput(dbCollectionsIndexes) {

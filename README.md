@@ -37,6 +37,10 @@ Usage with authentication:
 mongo-index-exporter localhost:27017/test --username john --password s3ecr3t
 ```
 
+```sh
+mongo-index-exporter localhost:27017/test --username superuser --password T0pS3ecr3t --authenticationDatabase admin
+```
+
 ### Output
 CLI version outputs index definitions in a format that you can immediately use
 to instantiate your database indexes:
