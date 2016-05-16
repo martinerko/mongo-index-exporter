@@ -34,7 +34,7 @@ mongo-index-exporter localhost:27017/test
 Usage with authentication:
 
 ```sh
-mongo-index-exporter localhost:27017/test --username john --password s3ecr3t
+mongo-index-exporter localhost:27017/test -u john -p s3ecr3t
 ```
 
 ```sh

@@ -10,6 +10,7 @@
  * Module dependencies.
  */
 
+
 var argv = require('minimist')(process.argv.slice(2));
 var help = require('./help');
 var exporter = require("../lib/exporter");
@@ -21,8 +22,8 @@ if (argv.h || argv.help) {
 
 var connArgs = {
   connectionString: process.argv[2],
-  username: argv.username,
-  password: argv.password,
+  username: argv.username || argv.u,
+  password: argv.password || argv.p,
   authenticationDatabase: argv.authenticationDatabase
 };
 
