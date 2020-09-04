@@ -21,6 +21,6 @@
     "bluebird": "^3.3.5",
     "debug": "^2.2.0",
     "minimist": "^1.2.0",
-    "mongodb": "^2.1.18"
+    "mongodb": "^3.6.1"
   }
 }
