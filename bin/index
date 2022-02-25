@@ -32,8 +32,13 @@ function processOutput(dbCollectionsIndexes) {
     var indexes = dbCollectionsIndexes[col];
     if (indexes.length) {
       console.log('// %s', col);
+      if (argv.createCollectionCMD) {
+        console.log(`db.createCollection("${col}");`)
+      }
       indexes.map(getCreateIndexStatement.bind(null, col)).sort().forEach(function(def) {
-        console.log(def);
+        if (def != '') {
+          console.log(def);
+        }
       });
       console.log('');
     }
@@ -41,6 +46,11 @@ function processOutput(dbCollectionsIndexes) {
 }
 
 function getCreateIndexStatement(col, indObj) {
+  // skip default _id index, the create collection cmd will ensure the creation of _id index
+  if (argv.createCollectionCMD && indObj.name == '_id_') {
+    return ''
+  }
+
   var keys = JSON.stringify(indObj.key);
   delete indObj.v;
   delete indObj.key;
